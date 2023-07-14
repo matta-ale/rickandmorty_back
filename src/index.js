@@ -1,4 +1,4 @@
-const PORT = 3001
+const PORT = process.env.PORT || 3001;
 const server = require('./server.js')
 const {conn} = require('./DB_connection');
 

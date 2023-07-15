@@ -13,7 +13,7 @@ const UserModel = require('./models/User');
 //    { logging: false, native: false }
 // );
 
-const sequelize = new Sequelize(
+var sequelize = new Sequelize(
    DB_DEPLOY,
    { logging: false, native: false }
 );

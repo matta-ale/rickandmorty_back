@@ -11,7 +11,7 @@ server.use((req, res, next) => {
     res.header('Access-Control-Allow-Credentials', 'true'); //permitir envío de cookies y credenciales para auth
     res.header(//qué tipo de headers se puecen mandar
        'Access-Control-Allow-Headers',
-       'Origin, X-Requested-With, Content-Type, Accept'
+        'Origin, X-Requested-With, Content-Type, Accept'
     ); 
     res.header( //métodos http
        'Access-Control-Allow-Methods',

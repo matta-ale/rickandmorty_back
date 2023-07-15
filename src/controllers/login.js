@@ -4,15 +4,15 @@ const login = async (req,res) => {
     const {email,password} = req.query
 
     if(!email || !password) {
-        res.status(400).send('Faltan datos')
+        res.status(400).send('Please complete your data')
     } else {
         try {
             const user = await User.findOne({where:{email}})
             if (user===null) {
-                res.status(404).send('Usuario no encontrado')
+                res.status(404).send('That user is not registered')
             } else {
                 if (user.password!==password) {
-                    res.status(403).send('Contraseña incorrecta')
+                    res.status(403).send('Incorrect password')
                 } else {
                     const {id} = user.get({ plain: true })
                     res.status(200).json({userId: id,access: true})
